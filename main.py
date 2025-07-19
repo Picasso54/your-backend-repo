@@ -1,7 +1,10 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import requests
-from config import OPENROUTER_API_KEY
+import os
+
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
+
 
 app = FastAPI()
 
